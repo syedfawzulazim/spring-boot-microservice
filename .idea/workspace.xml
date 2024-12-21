@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b711e268-ae48-4b36-bd27-86052f65a278" name="Changes" comment="update: .gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sfazim/order/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/sfazim/order/OrderServiceApplicationTests.java" afterDir="false" />
+    <list default="true" id="b711e268-ae48-4b36-bd27-86052f65a278" name="Changes" comment="feat: integration test aded">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,13 +142,58 @@
       <option name="project" value="LOCAL" />
       <updated>1734772165994</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update: .idea">
+      <option name="closed" value="true" />
+      <created>1734777778298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734777778298</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add: restAssured">
+      <option name="closed" value="true" />
+      <created>1734777802961</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734777802961</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: order service controller repository">
+      <option name="closed" value="true" />
+      <created>1734777833352</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734777833352</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: db migration">
+      <option name="closed" value="true" />
+      <created>1734777843477</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734777843477</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: integration test aded">
+      <option name="closed" value="true" />
+      <created>1734777868740</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734777868740</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete .idea" />
     <MESSAGE value="create root pom.xml" />
     <MESSAGE value="update: .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: .gitignore" />
+    <MESSAGE value="update: .idea" />
+    <MESSAGE value="add: restAssured" />
+    <MESSAGE value="feat: order service controller repository" />
+    <MESSAGE value="feat: db migration" />
+    <MESSAGE value="feat: integration test aded" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: integration test aded" />
   </component>
 </project>
