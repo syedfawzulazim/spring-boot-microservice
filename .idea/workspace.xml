@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b711e268-ae48-4b36-bd27-86052f65a278" name="Changes" comment="feat: inventory service added">
+    <list default="true" id="b711e268-ae48-4b36-bd27-86052f65a278" name="Changes" comment="feat: notification service added as kafka consumer">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sfazim/notification/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sfazim/notification/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sfazim/order/event/OrderPlacedEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sfazim/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sfazim/order/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +32,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -46,16 +50,20 @@
   "keyToString": {
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.InventoryServiceApplication.executor": "Run",
+    "Application.NotificationServiceApplication.executor": "Run",
     "Application.OrderServiceApplication.executor": "Run",
     "Application.ProductServiceApplication.executor": "Run",
     "JUnit.InventoryServiceApplicationTests.executor": "Run",
     "JUnit.OrderServiceApplicationTests.executor": "Run",
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrder.executor": "Run",
+    "Maven.spring-boot-microservice [clean,compile].executor": "Run",
+    "Maven.spring-boot-microservice [clean].executor": "Run",
+    "Maven.spring-boot-microservice [compile].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/adnansparrow/IdeaProjects/spring-boot-microservice/inventory-service/src/main/resources/db/migration",
+    "last_opened_file_path": "/Users/adnansparrow/IdeaProjects/spring-boot-microservice/notification-service/src/main/resources",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
@@ -64,14 +72,42 @@
       <recent name="com.sfazim.order.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notification-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/inventory-service/src/main/resources/db/migration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sfazim.notification.orders" />
+      <recent name="com.sfazim.inventory.config" />
+      <recent name="com.sfazim.order.config" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="InventoryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn compile" />
+      <command value="mvn clean compile" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.NotificationServiceApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sfazim.gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sfazim.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sfazim.inventory.InventoryServiceApplication" />
       <module name="inventory-service" />
       <extension name="coverage">
         <pattern>
@@ -79,14 +115,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sfazim.inventory" />
-      <option name="MAIN_CLASS_NAME" value="com.sfazim.inventory.InventoryServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotificationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sfazim.notification.NotificationServiceApplication" />
+      <module name="notification-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sfazim.notification.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sfazim.order.OrderServiceApplication" />
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -94,34 +141,30 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sfazim.order" />
-      <option name="MAIN_CLASS_NAME" value="com.sfazim.order.OrderServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplicationTests.shouldSubmitOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
+    <configuration name="ProductServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sfazim.e_commerce.product.ProductServiceApplication" />
+      <module name="product-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sfazim.order.*" />
+          <option name="PATTERN" value="com.sfazim.e_commerce.product.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sfazim.order" />
-      <option name="MAIN_CLASS_NAME" value="com.sfazim.order.OrderServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldSubmitOrder" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InventoryServiceApplicationTests" />
-        <item itemvalue="JUnit.OrderServiceApplicationTests.shouldSubmitOrder" />
-        <item itemvalue="JUnit.OrderServiceApplicationTests" />
+        <item itemvalue="Application.NotificationServiceApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.InventoryServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.ProductServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +249,103 @@
       <option name="project" value="LOCAL" />
       <updated>1734778325836</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=".idea update">
+      <option name="closed" value="true" />
+      <created>1734899329854</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734899329854</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: api gateway added for 3 services">
+      <option name="closed" value="true" />
+      <created>1734899353684</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734899353684</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: authentication added for apis">
+      <option name="closed" value="true" />
+      <created>1734988433663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734988433664</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: OpenAPI specification added with springDoc">
+      <option name="closed" value="true" />
+      <created>1734990430614</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734990430614</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: OpenAPI documentation added with springDoc">
+      <option name="closed" value="true" />
+      <created>1734993020482</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734993020482</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: add restClient and remove feign">
+      <option name="closed" value="true" />
+      <created>1734995215429</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734995215429</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: add restClient config">
+      <option name="closed" value="true" />
+      <created>1734995249703</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734995249703</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: adding resilience4j &amp; actuator for circuit breaking and monitoring metrics">
+      <option name="closed" value="true" />
+      <created>1735077303762</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1735077303762</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: small changes">
+      <option name="closed" value="true" />
+      <created>1735137904707</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1735137904707</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: frontend angular app added">
+      <option name="closed" value="true" />
+      <created>1735137936786</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1735137936787</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: added kafka broker to order service">
+      <option name="closed" value="true" />
+      <created>1735163781384</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1735163781384</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: notification service added as kafka consumer">
+      <option name="closed" value="true" />
+      <created>1735173047548</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1735173047548</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -219,6 +358,18 @@
     <MESSAGE value="feat: db migration" />
     <MESSAGE value="feat: integration test aded" />
     <MESSAGE value="feat: inventory service added" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: inventory service added" />
+    <MESSAGE value=".idea update" />
+    <MESSAGE value="feat: api gateway added for 3 services" />
+    <MESSAGE value="feat: authentication added for apis" />
+    <MESSAGE value="feat: OpenAPI specification added with springDoc" />
+    <MESSAGE value="feat: OpenAPI documentation added with springDoc" />
+    <MESSAGE value="feat: add restClient and remove feign" />
+    <MESSAGE value="feat: add restClient config" />
+    <MESSAGE value="feat: adding resilience4j &amp; actuator for circuit breaking and monitoring metrics" />
+    <MESSAGE value="feat: small changes" />
+    <MESSAGE value="feat: frontend angular app added" />
+    <MESSAGE value="feat: added kafka broker to order service" />
+    <MESSAGE value="feat: notification service added as kafka consumer" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: notification service added as kafka consumer" />
   </component>
 </project>
