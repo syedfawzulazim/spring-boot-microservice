@@ -39,6 +39,8 @@ public class ProductService {
     }
 
     public List<ProductResponse> getAllProducts() {
+        log.info("Start getting all the products");
+
         return productRepository.findAll()
                 .stream()
                 .map(product -> new ProductResponse(
