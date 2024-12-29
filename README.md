@@ -1,6 +1,6 @@
 # Spring Boot - Micro-services for E-commerce.
 
-### Services:
+## Services:
 - Authentication (keycloak)
 - Product
 - Order
@@ -9,27 +9,27 @@
 - API gateway
 - Frontend (Angular)
 
-### Databases:
+## Databases:
 - MySQL
 - NoSQL
 
-### Testing(E2E):
+## Testing(E2E):
 - Test Containers with Wiremock
 
-### Inter-Service Communication
+## Inter-Service Communication
 - Resilience4j (Synchronous Communication)
 - Apache Kafka (Asynchronous Communication)
 
-### API Documentation:
+## API Documentation:
 - OpenAPI Specification (Swagger)
 
-### Observability:
+## Observability:
 - Grafana
 - Prometheus
 - Loki
 - Tempo
 
-### Containerization
+## Containerization
 - Docker & Docker-Compose
 
 ## Application Architecture
