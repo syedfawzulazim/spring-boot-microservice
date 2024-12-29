@@ -11,7 +11,7 @@
 
 ## Databases:
 - MySQL
-- NoSQL
+- MongoDB
 
 ## Testing(E2E):
 - Test Containers with Wiremock
