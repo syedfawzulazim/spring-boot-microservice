@@ -11,6 +11,20 @@ services:
       MONGO_INITDB_DATABASE: product-service
     volumes:
       - ./.data/mongo:/data/db
+    networks:
+      - backend-net
+
+  product-service:
+    build: ./product-service
+    container_name: product-service
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./product-service:/app
+    depends_on:
+      - mongodb
+    networks:
+      - backend-net
 
   mysql:
     image: mysql:8.3.0
@@ -151,3 +165,6 @@ services:
         - GF_AUTH_DISABLE_LOGIN_FORM=true
       ports:
         - "3000:3000"
+
+networks:
+  backend-net:

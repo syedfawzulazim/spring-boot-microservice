@@ -26,9 +26,24 @@ public class ProductController {
         return productService.createProduct(productRequest);
     }
 
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public List<ProductResponse> getAllProducts(){
+//        return productService.getAllProducts();
+//    }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<ProductResponse> getAllProducts(){
-        return productService.getAllProducts();
+    public String getAllProducts() throws InterruptedException {
+       // runCpuBoundTask();
+        return "Syeddd";
+    }
+
+    public static void runCpuBoundTask() {
+        double result = 0;
+        for (int i = 1; i < 1_000_000_000; i++) {
+            result += Math.cbrt(i);  // More expensive than sqrt
+        }
+        System.out.println("Computation finished. Result: " + result);
     }
 }
